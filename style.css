@@ -2083,3 +2083,80 @@ img, video, canvas, svg, iframe{ max-width:100%; }
   /* lock page scroll while the menu is open */
   html:has(.mobile-drawer.open){ overflow:hidden; }
 }
+
+
+/* =========================================================================
+   FORM DROPDOWN FIX — home page "Practice area" select  (appended only)
+   ---------------------------------------------------------------------
+   The select text is light (bone) to suit the dark form, and the browser's
+   dropdown list has its own light background, so the options were
+   cream-on-cream. Give the options an explicit dark background + light text.
+========================================================================= */
+.form-field select{
+  color-scheme:dark;                       /* dark native dropdown + scrollbar */
+  cursor:pointer;
+  padding-right:40px;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8' fill='none' stroke='%23C9A968' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M1 1.5l5 5 5-5'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;
+  background-position:right 16px center;
+}
+.form-field select option{
+  background-color:var(--ink-2);
+  color:var(--bone);
+}
+.form-field select option:checked,
+.form-field select option:hover{
+  background-color:var(--brass-2);
+  color:var(--bone);
+}
+
+
+/* =========================================================================
+   DASHBOARD MOBILE FIX — user-dashboard.html / admin-dashboard.html  (appended only)
+   ---------------------------------------------------------------------
+   Why the content was cut off on phones: grid tracks written as `1fr` really
+   mean minmax(auto,1fr), so a track can never be narrower than its content.
+   The inbox rows (single-line text with ellipsis), chart and tables have a
+   wide "natural" width, which stretched the panels far past the screen, and
+   the page-level overflow clip then hid everything beyond the edge.
+   Switching every dashboard grid track to minmax(0,1fr) lets the panels
+   shrink to the screen, so the ellipsis/scroll behaviour already in
+   auth.css works as intended.  Scoped to .dash-page, so no other page changes.
+========================================================================= */
+.dash-page .dash-shell{ grid-template-columns:260px minmax(0,1fr); }
+.dash-page .dash-stats{ grid-template-columns:repeat(4,minmax(0,1fr)); }
+.dash-page .dash-2col{ grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr); }
+.dash-page .dash-billing-summary{ grid-template-columns:repeat(3,minmax(0,1fr)); }
+.dash-page .dash-doc-grid{ grid-template-columns:repeat(4,minmax(0,1fr)); }
+.dash-page .dash-form-grid{ grid-template-columns:minmax(0,1fr) minmax(0,1fr); }
+
+/* every grid child may shrink below its content width */
+.dash-page .dash-main,
+.dash-page .dash-content,
+.dash-page .dash-stats > *,
+.dash-page .dash-2col > *,
+.dash-page .dash-billing-summary > *,
+.dash-page .dash-doc-grid > *,
+.dash-page .dash-form-grid > *{ min-width:0; }
+.dash-page .dash-panel{ max-width:100%; }
+
+@media (max-width:1080px){
+  .dash-page .dash-stats{ grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .dash-page .dash-2col{ grid-template-columns:minmax(0,1fr); }
+  .dash-page .dash-billing-summary{ grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .dash-page .dash-doc-grid{ grid-template-columns:repeat(3,minmax(0,1fr)); }
+  .dash-page .dash-form-grid{ grid-template-columns:minmax(0,1fr); }
+}
+@media (max-width:900px){
+  .dash-page .dash-shell{ grid-template-columns:minmax(0,1fr); }
+}
+@media (max-width:720px){
+  .dash-page .dash-billing-summary{ grid-template-columns:minmax(0,1fr); }
+  .dash-page .dash-doc-grid{ grid-template-columns:repeat(2,minmax(0,1fr)); }
+}
+@media (max-width:640px){
+  .dash-page .dash-stats{ grid-template-columns:repeat(2,minmax(0,1fr)); }
+}
+@media (max-width:420px){
+  .dash-page .dash-stats{ grid-template-columns:minmax(0,1fr); }
+}

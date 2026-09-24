@@ -573,3 +573,55 @@ body.dash-mv-lock{ overflow:hidden; }
 .auth-forgot{ font-size:13px; font-weight:600; color:var(--brass-2); transition:color .25s; }
 .auth-forgot:hover{ color:var(--ink); text-decoration:underline; }
 .auth-forgot:focus-visible{ outline:2px solid var(--brass); outline-offset:3px; border-radius:4px; }
+
+
+
+/* =========================================================================
+   DASHBOARD MOBILE FIX — user-dashboard.html / admin-dashboard.html  (appended only)
+   ---------------------------------------------------------------------
+   Why the content was cut off on phones: grid tracks written as `1fr` really
+   mean minmax(auto,1fr), so a track can never be narrower than its content.
+   The inbox rows (single-line text with ellipsis), chart and tables have a
+   wide "natural" width, which stretched the panels far past the screen, and
+   the page-level overflow clip then hid everything beyond the edge.
+   Switching every dashboard grid track to minmax(0,1fr) lets the panels
+   shrink to the screen, so the ellipsis/scroll behaviour already in
+   auth.css works as intended.  Scoped to .dash-page, so no other page changes.
+========================================================================= */
+.dash-page .dash-shell{ grid-template-columns:260px minmax(0,1fr); }
+.dash-page .dash-stats{ grid-template-columns:repeat(4,minmax(0,1fr)); }
+.dash-page .dash-2col{ grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr); }
+.dash-page .dash-billing-summary{ grid-template-columns:repeat(3,minmax(0,1fr)); }
+.dash-page .dash-doc-grid{ grid-template-columns:repeat(4,minmax(0,1fr)); }
+.dash-page .dash-form-grid{ grid-template-columns:minmax(0,1fr) minmax(0,1fr); }
+
+/* every grid child may shrink below its content width */
+.dash-page .dash-main,
+.dash-page .dash-content,
+.dash-page .dash-stats > *,
+.dash-page .dash-2col > *,
+.dash-page .dash-billing-summary > *,
+.dash-page .dash-doc-grid > *,
+.dash-page .dash-form-grid > *{ min-width:0; }
+.dash-page .dash-panel{ max-width:100%; }
+
+@media (max-width:1080px){
+  .dash-page .dash-stats{ grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .dash-page .dash-2col{ grid-template-columns:minmax(0,1fr); }
+  .dash-page .dash-billing-summary{ grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .dash-page .dash-doc-grid{ grid-template-columns:repeat(3,minmax(0,1fr)); }
+  .dash-page .dash-form-grid{ grid-template-columns:minmax(0,1fr); }
+}
+@media (max-width:900px){
+  .dash-page .dash-shell{ grid-template-columns:minmax(0,1fr); }
+}
+@media (max-width:720px){
+  .dash-page .dash-billing-summary{ grid-template-columns:minmax(0,1fr); }
+  .dash-page .dash-doc-grid{ grid-template-columns:repeat(2,minmax(0,1fr)); }
+}
+@media (max-width:640px){
+  .dash-page .dash-stats{ grid-template-columns:repeat(2,minmax(0,1fr)); }
+}
+@media (max-width:420px){
+  .dash-page .dash-stats{ grid-template-columns:minmax(0,1fr); }
+}

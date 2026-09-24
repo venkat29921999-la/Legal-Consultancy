@@ -2019,3 +2019,67 @@ img, video, canvas, svg, iframe{ max-width:100%; }
   /* newsletter input had a 240px minimum — let it shrink on small phones */
   .bln-form input{ min-width:0; }
 }
+
+
+/* =========================================================================
+   FULL-SCREEN MOBILE MENU + CLOSE BUTTON  (appended only — nothing above is modified)
+   ---------------------------------------------------------------------
+   • The menu now covers the whole screen instead of a 340px side panel.
+   • The hamburger sits ABOVE the menu and turns into a round "X" close button
+     (same spot, so open/close is one tap in the same place).
+   • Logo stays visible on top of the menu.
+   • Page behind the menu can't scroll while it is open.
+========================================================================= */
+@media (max-width:860px){
+
+  /* keep logo + hamburger/close button above the full-screen menu */
+  .header-logo, .hamburger{ position:relative; z-index:1002; }
+
+  .mobile-drawer{
+    top:0; left:0; right:0; width:auto;
+    height:100vh; height:100dvh;
+    padding:110px 28px 40px;
+    justify-content:center; align-items:flex-start; gap:36px;
+    border-left:0;
+    overflow-y:auto;
+    background:
+      radial-gradient(520px 420px at 100% 0%, rgba(173,134,66,.18), transparent 65%),
+      radial-gradient(420px 360px at 0% 100%, rgba(173,134,66,.10), transparent 65%),
+      var(--ink-3);
+  }
+  .mobile-drawer ul{ gap:22px; width:100%; }
+  .mnav-link{
+    display:block; font-size:clamp(32px, 9vw, 44px); line-height:1.15;
+    padding:4px 0;
+  }
+  .mobile-drawer .btn-login{ font-size:15px; padding:13px 26px; }
+
+  /* links slide up one after another when the menu opens */
+  .mobile-drawer li, .mobile-drawer .mobile-login{
+    opacity:0; transform:translateY(18px);
+    transition:opacity .5s var(--ease), transform .5s var(--ease);
+  }
+  .mobile-drawer.open li, .mobile-drawer.open .mobile-login{ opacity:1; transform:none; }
+  .mobile-drawer.open li:nth-child(1){ transition-delay:.18s; }
+  .mobile-drawer.open li:nth-child(2){ transition-delay:.24s; }
+  .mobile-drawer.open li:nth-child(3){ transition-delay:.30s; }
+  .mobile-drawer.open li:nth-child(4){ transition-delay:.36s; }
+  .mobile-drawer.open li:nth-child(5){ transition-delay:.42s; }
+  .mobile-drawer.open .mobile-login{ transition-delay:.50s; }
+
+  /* hamburger -> round X close button (works whether or not the script adds .open to the button) */
+  .hamburger{
+    align-items:center; border:1.3px solid transparent; border-radius:50%;
+    transition:border-color .3s, background .3s;
+  }
+  .site-header:has(.mobile-drawer.open) .hamburger{
+    border-color:rgba(241,236,224,.35);
+  }
+  .site-header:has(.mobile-drawer.open) .hamburger span{ width:16px; }
+  .site-header:has(.mobile-drawer.open) .hamburger span:nth-child(1){ transform:translateY(7px) rotate(45deg); }
+  .site-header:has(.mobile-drawer.open) .hamburger span:nth-child(2){ opacity:0; }
+  .site-header:has(.mobile-drawer.open) .hamburger span:nth-child(3){ transform:translateY(-7px) rotate(-45deg); }
+
+  /* lock page scroll while the menu is open */
+  html:has(.mobile-drawer.open){ overflow:hidden; }
+}

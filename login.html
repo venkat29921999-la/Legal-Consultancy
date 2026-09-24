@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sign In &mdash; Stackly Legal</title>
+<meta name="description" content="Sign in to your Stackly Legal client or admin portal.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,450;0,9..144,560;0,9..144,650;1,9..144,450&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="auth.css">
+</head>
+<body class="auth-page">
+
+<a href="index.html" class="auth-back"><i class="fa-solid fa-arrow-left-long"></i><span>Back to home</span></a>
+
+<div class="auth-shell">
+
+  <!-- ===== brand visual (hidden on mobile) ===== -->
+  <div class="auth-visual">
+    <span class="auth-blob auth-blob-1"></span>
+    <span class="auth-blob auth-blob-2"></span>
+
+    <div class="auth-visual-top">
+      <span class="logo-mark" role="img" aria-label="Stackly Legal"></span>
+    </div>
+
+    <div class="auth-visual-mid">
+      <h2>Senior counsel, on your side from the first call.</h2>
+      <div class="auth-quotes">
+        <div class="auth-quote active">
+          <p>&ldquo;They treated our acquisition like it was the only file on their desk.&rdquo;</p>
+          <span>&mdash; Halvorsen LLC, Corporate client</span>
+        </div>
+        <div class="auth-quote">
+          <p>&ldquo;Fixed fees, real answers, no surprise invoices.&rdquo;</p>
+          <span>&mdash; Kessler Group, Family client</span>
+        </div>
+        <div class="auth-quote">
+          <p>&ldquo;Our trademark issue was resolved faster than we thought possible.&rdquo;</p>
+          <span>&mdash; Northline Studio, IP client</span>
+        </div>
+      </div>
+      <div class="auth-dots"><i class="active"></i><i></i><i></i></div>
+    </div>
+  </div>
+
+  <!-- ===== form panel ===== -->
+  <div class="auth-form-wrap">
+    <div class="auth-card">
+      <div class="auth-card-logo"><span class="logo-mark" role="img" aria-label="Stackly Legal"></span></div>
+
+      <h1>Welcome back</h1>
+      <p class="auth-sub">Sign in to access your dashboard.</p>
+
+      <form id="loginForm" novalidate>
+        <div class="role-toggle">
+          <input type="radio" name="loginRole" id="loginRoleAdmin" value="admin">
+          <label for="loginRoleAdmin"><i class="fa-solid fa-user-shield"></i> Admin</label>
+          <input type="radio" name="loginRole" id="loginRoleUser" value="user" checked>
+          <label for="loginRoleUser"><i class="fa-solid fa-user"></i> Client</label>
+          <span class="role-toggle-pill"></span>
+        </div>
+
+        <div id="loginMsg" class="auth-msg"></div>
+
+        <div class="field-group">
+          <i class="fa-solid fa-envelope fld-icon"></i>
+          <input type="email" id="loginEmail" placeholder=" " autocomplete="email" required>
+          <label for="loginEmail">Email address</label>
+        </div>
+
+        <div class="field-group">
+          <i class="fa-solid fa-lock fld-icon"></i>
+          <input type="password" id="loginPassword" placeholder=" " autocomplete="current-password" required>
+          <label for="loginPassword">Password</label>
+          <button type="button" class="fld-toggle" aria-label="Show password"><i class="fa-solid fa-eye"></i></button>
+        </div>
+
+        <div class="auth-forgot-row">
+          <a href="404.html" class="auth-forgot">Forgot password?</a>
+        </div>
+
+        <button type="submit" class="btn-primary">
+          <span class="btn-label">Sign In</span>
+          <span class="btn-spinner"></span>
+        </button>
+      </form>
+
+      <p class="auth-foot">Don't have an account? <a href="signup.html">Create one</a></p>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="script.js"></script>
+<script src="auth.js"></script>
+</body>
+</html>

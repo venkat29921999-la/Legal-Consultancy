@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Dashboard &mdash; Stackly Legal</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,450;0,9..144,560;0,9..144,650;1,9..144,450&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="auth.css">
+</head>
+<body class="dash-page" data-role="user">
+
+<div class="dash-overlay"></div>
+
+<div class="dash-shell">
+
+  <!-- ===== SIDEBAR ===== -->
+  <aside class="dash-sidebar">
+    <div class="dash-sidebar-logo"><span class="logo-mark" role="img" aria-label="Stackly Legal"></span></div>
+
+    <nav class="dash-nav">
+      <div class="dash-nav-label">Overview</div>
+      <a href="#" data-page="dashboard" class="active"><i class="fa-solid fa-gauge-high"></i> Dashboard</a>
+      <a href="#" data-page="inbox"><i class="fa-solid fa-envelope"></i> Inbox <span class="dash-badge">2</span></a>
+      <a href="#" data-page="matters"><i class="fa-solid fa-briefcase"></i> My Matters</a>
+
+      <div class="dash-nav-label">Account</div>
+      <a href="#" data-page="billing"><i class="fa-solid fa-file-invoice-dollar"></i> Billing</a>
+      <a href="#" data-page="documents"><i class="fa-solid fa-folder-open"></i> Documents</a>
+      <a href="#" data-page="settings"><i class="fa-solid fa-gear"></i> Settings</a>
+      <a href="index.html"><i class="fa-solid fa-house"></i> Visit Website</a>
+    </nav>
+
+    <div class="dash-sidebar-foot">
+      <button class="dash-logout-btn js-logout"><i class="fa-solid fa-arrow-right-from-bracket"></i> Log out</button>
+    </div>
+  </aside>
+
+  <!-- ===== MAIN ===== -->
+  <main class="dash-main">
+    <div class="dash-topbar">
+      <button class="dash-hamburger" aria-label="Toggle menu"><i class="fa-solid fa-bars"></i></button>
+      <div class="dash-top-actions">
+<a href="404.html" class="dash-bell">
+    <i class="fa-solid fa-bell"></i>
+    <span class="dash-bell-dot"></span>
+</a>        <div class="dash-user">
+          <div class="dash-avatar js-user-initials">U</div>
+          <div class="dash-user-info"><strong class="js-user-name">&nbsp;</strong><span class="js-user-email">&nbsp;</span></div>
+          <i class="fa-solid fa-chevron-down" style="font-size:10px;color:#8a8879;"></i>
+          <div class="dash-user-menu">
+            <a href="404.html" data-page="settings"><i class="fa-solid fa-user"></i> Profile</a>
+            <a href="404.html" data-page="settings"><i class="fa-solid fa-gear"></i> Settings</a>
+            <a href="login.html" class="danger js-logout"><i class="fa-solid fa-arrow-right-from-bracket"></i> Log out</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="dash-content">
+
+      <!-- ================= DASHBOARD (overview) ================= -->
+      <div class="dash-page-section active" data-page="dashboard">
+        <div class="dash-welcome">
+          <h1>Welcome back, <span class="js-user-name">there</span><span class="dash-role-badge">Client</span></h1>
+          <p class="js-today">&nbsp;</p>
+        </div>
+
+        <div class="dash-stats">
+          <div class="dash-stat-card" data-target="4" data-suffix="">
+            <div class="dash-stat-top"><div class="dash-stat-icon"><i class="fa-solid fa-briefcase"></i></div><div class="dash-stat-trend"><i class="fa-solid fa-arrow-up"></i> 1</div></div>
+            <span class="num">0</span><label>Active matters</label>
+          </div>
+          <div class="dash-stat-card" data-target="16" data-suffix="">
+            <div class="dash-stat-top"><div class="dash-stat-icon"><i class="fa-solid fa-folder-open"></i></div><div class="dash-stat-trend"><i class="fa-solid fa-arrow-up"></i> 2</div></div>
+            <span class="num">0</span><label>Shared documents</label>
+          </div>
+          <div class="dash-stat-card" data-target="2400" data-suffix="">
+            <div class="dash-stat-top"><div class="dash-stat-icon"><i class="fa-solid fa-file-invoice-dollar"></i></div><div class="dash-stat-trend down"><i class="fa-solid fa-arrow-down"></i> paid</div></div>
+            <span class="num">0</span><label>Outstanding balance ($)</label>
+          </div>
+          <div class="dash-stat-card" data-target="2" data-suffix="">
+            <div class="dash-stat-top"><div class="dash-stat-icon"><i class="fa-solid fa-calendar-check"></i></div><div class="dash-stat-trend"><i class="fa-solid fa-arrow-up"></i> new</div></div>
+            <span class="num">0</span><label>Upcoming meetings</label>
+          </div>
+        </div>
+
+        <div class="dash-2col">
+          <div class="dash-panel">
+            <div class="dash-panel-head"><h3>Matter activity (last 7 days)</h3><a href="#" data-page="matters">View timeline</a></div>
+            <div class="dash-bars">
+              <div class="dash-bar-col"><div class="dash-bar" data-h="30"></div><span>Mon</span></div>
+              <div class="dash-bar-col"><div class="dash-bar" data-h="55"></div><span>Tue</span></div>
+              <div class="dash-bar-col"><div class="dash-bar" data-h="20"></div><span>Wed</span></div>
+              <div class="dash-bar-col"><div class="dash-bar" data-h="70"></div><span>Thu</span></div>
+              <div class="dash-bar-col"><div class="dash-bar" data-h="40"></div><span>Fri</span></div>
+              <div class="dash-bar-col"><div class="dash-bar" data-h="10"></div><span>Sat</span></div>
+              <div class="dash-bar-col"><div class="dash-bar" data-h="8"></div><span>Sun</span></div>
+            </div>
+          </div>
+
+          <div class="dash-panel">
+            <div class="dash-panel-head"><h3>Inbox</h3><a href="#" data-page="inbox">View all</a></div>
+            <div class="dash-inbox-list" id="dashInboxList"></div>
+          </div>
+        </div>
+
+        <div class="dash-panel">
+          <div class="dash-panel-head"><h3>My matters</h3><a href="#" data-page="matters">View all</a></div>
+          <div class="dash-table-wrap">
+            <table class="dash-table">
+              <thead><tr><th>Matter</th><th>Practice area</th><th>Lead attorney</th><th>Status</th></tr></thead>
+              <tbody id="dashTableBody"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- ================= INBOX (full) ================= -->
+      <div class="dash-page-section" data-page="inbox">
+        <div class="dash-section-head">
+          <div><h2>Inbox</h2><p>Messages from your legal team, billing and document updates.</p></div>
+        </div>
+        <div class="dash-filter-pills" data-target="#dashInboxFull">
+          <span class="dash-filter-pill active" data-filter="all">All</span>
+          <span class="dash-filter-pill" data-filter="unread">Unread</span>
+          <span class="dash-filter-pill" data-filter="read">Read</span>
+        </div>
+        <div class="dash-panel">
+          <div class="dash-inbox-list" id="dashInboxFull"></div>
+        </div>
+      </div>
+
+      <!-- ================= MY MATTERS (full) ================= -->
+      <div class="dash-page-section" data-page="matters">
+        <div class="dash-section-head">
+          <div><h2>My Matters</h2><p>Every case we're currently handling on your behalf.</p></div>
+        </div>
+        <div id="dashMattersFull"></div>
+      </div>
+
+      <!-- ================= BILLING (full) ================= -->
+      <div class="dash-page-section" data-page="billing">
+        <div class="dash-section-head">
+          <div><h2>Billing</h2><p>Invoices, payments and your current balance.</p></div>
+        </div>
+        <div class="dash-billing-summary">
+          <div class="dash-stat-card" data-target="2400" data-suffix="">
+            <div class="dash-stat-top"><div class="dash-stat-icon"><i class="fa-solid fa-sack-dollar"></i></div></div>
+            <span class="num">0</span><label>Outstanding balance ($)</label>
+          </div>
+          <div class="dash-stat-card" data-target="2630" data-suffix="">
+            <div class="dash-stat-top"><div class="dash-stat-icon"><i class="fa-solid fa-circle-check"></i></div></div>
+            <span class="num">0</span><label>Paid to date ($)</label>
+          </div>
+          <div class="dash-stat-card" data-target="4" data-suffix="">
+            <div class="dash-stat-top"><div class="dash-stat-icon"><i class="fa-solid fa-file-invoice"></i></div></div>
+            <span class="num">0</span><label>Total invoices</label>
+          </div>
+        </div>
+        <div class="dash-panel">
+          <div class="dash-panel-head"><h3>Invoice history</h3></div>
+          <div class="dash-table-wrap">
+            <table class="dash-table">
+              <thead><tr><th>Invoice</th><th>Matter</th><th>Amount</th><th>Date</th><th>Status</th></tr></thead>
+              <tbody id="dashInvoiceList"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- ================= DOCUMENTS (full) ================= -->
+      <div class="dash-page-section" data-page="documents">
+        <div class="dash-section-head">
+          <div><h2>Documents</h2><p>Files your legal team has shared with you.</p></div>
+        </div>
+        <div class="dash-panel">
+         <div class="dash-doc-grid" id="dashDocGrid">
+    <div class="dash-doc-card reveal-up">
+        <div class="dash-doc-icon"><i class="fa-solid fa-file-pdf"></i></div>
+        <h5>Retainer Agreement</h5>
+        <span>PDF &middot; 2.1 MB</span>
+        <a href="404.html" class="dash-doc-dl">
+            <i class="fa-solid fa-download"></i> Download
+        </a>
+    </div>
+
+    <div class="dash-doc-card reveal-up">
+        <div class="dash-doc-icon"><i class="fa-solid fa-file-lines"></i></div>
+        <h5>Trademark Application</h5>
+        <span>DOCX &middot; 640 KB</span>
+        <a href="404.html" class="dash-doc-dl">
+            <i class="fa-solid fa-download"></i> Download
+        </a>
+    </div>
+
+    <div class="dash-doc-card reveal-up">
+        <div class="dash-doc-icon"><i class="fa-solid fa-file-invoice-dollar"></i></div>
+        <h5>Invoice #4471</h5>
+        <span>PDF &middot; 180 KB</span>
+        <a href="404.html" class="dash-doc-dl">
+            <i class="fa-solid fa-download"></i> Download
+        </a>
+    </div>
+
+    <div class="dash-doc-card reveal-up">
+        <div class="dash-doc-icon"><i class="fa-solid fa-file-pdf"></i></div>
+        <h5>Estate Plan Draft</h5>
+        <span>PDF &middot; 3.4 MB</span>
+        <a href="404.html" class="dash-doc-dl">
+            <i class="fa-solid fa-download"></i> Download
+        </a>
+    </div>
+
+    <div class="dash-doc-card reveal-up">
+        <div class="dash-doc-icon"><i class="fa-solid fa-file-signature"></i></div>
+        <h5>Signed NDA</h5>
+        <span>PDF &middot; 410 KB</span>
+        <a href="404.html" class="dash-doc-dl">
+            <i class="fa-solid fa-download"></i> Download
+        </a>
+    </div>
+
+    <div class="dash-doc-card reveal-up">
+        <div class="dash-doc-icon"><i class="fa-solid fa-file-lines"></i></div>
+        <h5>Consultation Notes</h5>
+        <span>DOCX &middot; 95 KB</span>
+        <a href="404.html" class="dash-doc-dl">
+            <i class="fa-solid fa-download"></i> Download
+        </a>
+    </div>
+
+    <div class="dash-doc-card reveal-up">
+        <div class="dash-doc-icon"><i class="fa-solid fa-file-invoice-dollar"></i></div>
+        <h5>Invoice #4402</h5>
+        <span>PDF &middot; 175 KB</span>
+        <a href="404.html" class="dash-doc-dl">
+            <i class="fa-solid fa-download"></i> Download
+        </a>
+    </div>
+
+    <div class="dash-doc-card reveal-up">
+        <div class="dash-doc-icon"><i class="fa-solid fa-file-pdf"></i></div>
+        <h5>Filing Confirmation</h5>
+        <span>PDF &middot; 220 KB</span>
+        <a href="404.html" class="dash-doc-dl">
+            <i class="fa-solid fa-download"></i> Download
+        </a>
+    </div>
+</div>
+
+        </div>
+      </div>
+
+      <!-- ================= SETTINGS (full) ================= -->
+      <div class="dash-page-section" data-page="settings">
+        <div class="dash-section-head">
+          <div><h2>Settings</h2><p>Manage your profile and notification preferences.</p></div>
+        </div>
+        <form id="settingsForm">
+          <div id="settingsMsg" class="auth-msg"></div>
+          <div class="dash-panel" style="margin-bottom:22px;">
+            <div class="dash-panel-head"><h3>Profile</h3></div>
+            <div class="dash-form-grid">
+              <div class="dash-field"><label>Full name</label><input type="text" id="settingsName"></div>
+              <div class="dash-field"><label>Email address</label><input type="email" id="settingsEmail" disabled></div>
+              <div class="dash-field"><label>Role</label><input type="text" id="settingsRole" disabled></div>
+              <div class="dash-field"><label>Phone number</label><input type="tel" placeholder="+1 (___) ___-____"></div>
+            </div>
+          </div>
+          <div class="dash-panel">
+            <div class="dash-panel-head"><h3>Notifications</h3></div>
+            <div class="dash-switch-row">
+              <div><strong>Email updates</strong><span>Case status changes and document uploads</span></div>
+              <label class="switch"><input type="checkbox" checked><span class="switch-track"></span></label>
+            </div>
+            <div class="dash-switch-row">
+              <div><strong>SMS reminders</strong><span>Upcoming meeting and deadline alerts</span></div>
+              <label class="switch"><input type="checkbox" checked><span class="switch-track"></span></label>
+            </div>
+            <div class="dash-switch-row">
+              <div><strong>Billing alerts</strong><span>New invoices and payment confirmations</span></div>
+              <label class="switch"><input type="checkbox"><span class="switch-track"></span></label>
+            </div>
+          </div>
+<button type="button" class="btn-primary" style="margin-top:22px;" onclick="window.location.href='404.html';">
+    <span class="btn-label">Save changes</span>
+    <span class="btn-spinner"></span>
+</button>
+        </form>
+      </div>
+
+    </div>
+  </main>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="script.js"></script>
+<script src="auth.js"></script>
+</body>
+</html>

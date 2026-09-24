@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Create Account &mdash; Stackly Legal</title>
+<meta name="description" content="Create your Stackly Legal client or admin account.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,450;0,9..144,560;0,9..144,650;1,9..144,450&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="auth.css">
+</head>
+<body class="auth-page">
+
+<a href="index.html" class="auth-back"><i class="fa-solid fa-arrow-left-long"></i><span>Back to home</span></a>
+
+<div class="auth-shell">
+
+  <!-- ===== brand visual (hidden on mobile) ===== -->
+  <div class="auth-visual">
+    <span class="auth-blob auth-blob-1"></span>
+    <span class="auth-blob auth-blob-2"></span>
+
+    <div class="auth-visual-top">
+      <span class="logo-mark" role="img" aria-label="Stackly Legal"></span>
+    </div>
+
+    <div class="auth-visual-mid">
+      <h2>Join the portal built for people who hate legal jargon.</h2>
+      <div class="auth-quotes">
+        <div class="auth-quote active">
+          <p>&ldquo;Setup took two minutes and I could see my case status immediately.&rdquo;</p>
+          <span>&mdash; New client onboarding</span>
+        </div>
+        <div class="auth-quote">
+          <p>&ldquo;One login for documents, invoices and messages &mdash; finally.&rdquo;</p>
+          <span>&mdash; Whitmore Estate, Client</span>
+        </div>
+        <div class="auth-quote">
+          <p>&ldquo;Admin access gives our team a single, clear view of every matter.&rdquo;</p>
+          <span>&mdash; Stackly Legal operations</span>
+        </div>
+      </div>
+      <div class="auth-dots"><i class="active"></i><i></i><i></i></div>
+    </div>
+  </div>
+
+  <!-- ===== form panel ===== -->
+  <div class="auth-form-wrap">
+    <div class="auth-card">
+      <div class="auth-card-logo"><span class="logo-mark" role="img" aria-label="Stackly Legal"></span></div>
+
+      <h1>Create your account</h1>
+      <p class="auth-sub">Set up access to the client or admin portal.</p>
+
+      <form id="signupForm" novalidate>
+        <div class="role-toggle">
+          <input type="radio" name="signupRole" id="signupRoleAdmin" value="admin">
+          <label for="signupRoleAdmin"><i class="fa-solid fa-user-shield"></i> Admin</label>
+          <input type="radio" name="signupRole" id="signupRoleUser" value="user" checked>
+          <label for="signupRoleUser"><i class="fa-solid fa-user"></i> Client</label>
+          <span class="role-toggle-pill"></span>
+        </div>
+
+        <div id="signupMsg" class="auth-msg"></div>
+
+        <div class="field-group">
+          <i class="fa-solid fa-user fld-icon"></i>
+          <input type="text" id="signupName" placeholder=" " autocomplete="name" required>
+          <label for="signupName">Full name</label>
+        </div>
+
+        <div class="field-group">
+          <i class="fa-solid fa-envelope fld-icon"></i>
+          <input type="email" id="signupEmail" placeholder=" " autocomplete="email" required>
+          <label for="signupEmail">Email address</label>
+        </div>
+
+        <div class="field-group">
+          <i class="fa-solid fa-lock fld-icon"></i>
+          <input type="password" id="signupPassword" placeholder=" " autocomplete="new-password" required>
+          <label for="signupPassword">Password</label>
+          <button type="button" class="fld-toggle" aria-label="Show password"><i class="fa-solid fa-eye"></i></button>
+        </div>
+        <div class="pw-strength" id="pwStrength"><span></span><span></span><span></span><span></span></div>
+
+        <div class="field-group">
+          <i class="fa-solid fa-lock fld-icon"></i>
+          <input type="password" id="signupConfirm" placeholder=" " autocomplete="new-password" required>
+          <label for="signupConfirm">Confirm password</label>
+        </div>
+
+        <label class="auth-terms">
+          <input type="checkbox" id="signupTerms">
+          <span>I agree to the Terms of Service and Privacy Policy.</span>
+        </label>
+
+        <button type="submit" class="btn-primary">
+          <span class="btn-label">Create Account</span>
+          <span class="btn-spinner"></span>
+        </button>
+      </form>
+
+      <div id="signupSuccess" style="display:none; text-align:center; padding:20px 0;">
+        <div class="auth-success-check">
+          <svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"></path></svg>
+        </div>
+        <h1 style="font-size:20px;">Account created</h1>
+        <p class="auth-sub" style="margin-bottom:0;">Taking you to the sign-in page&hellip;</p>
+      </div>
+
+      <p class="auth-foot">Already have an account? <a href="login.html">Sign in</a></p>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="script.js"></script>
+<script src="auth.js"></script>
+</body>
+</html>

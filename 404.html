@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>404 &mdash; Page Not Found | Stackly Legal</title>
+<meta name="description" content="The page you're looking for could not be found.">
+<meta name="robots" content="noindex">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,450;0,9..144,560;0,9..144,650;1,9..144,450&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="404.css">
+</head>
+<body class="err-page">
+
+<!-- ===== animated background ===== -->
+<div class="err-bg" aria-hidden="true">
+  <span class="err-glow err-glow-1"></span>
+  <span class="err-glow err-glow-2"></span>
+  <span class="err-grid"></span>
+  <div class="err-papers">
+    <span class="err-paper" style="--x:6%;  --s:.85; --r:-18deg; --d:17s; --dl:-2s;  --dx:40px"></span>
+    <span class="err-paper" style="--x:16%; --s:.6;  --r:12deg;  --d:21s; --dl:-9s;  --dx:-30px"></span>
+    <span class="err-paper" style="--x:27%; --s:1;   --r:-8deg;  --d:19s; --dl:-14s; --dx:25px"></span>
+    <span class="err-paper" style="--x:39%; --s:.7;  --r:22deg;  --d:23s; --dl:-6s;  --dx:-45px"></span>
+    <span class="err-paper" style="--x:52%; --s:.9;  --r:-25deg; --d:18s; --dl:-11s; --dx:35px"></span>
+    <span class="err-paper" style="--x:63%; --s:.65; --r:9deg;   --d:22s; --dl:-4s;  --dx:-20px"></span>
+    <span class="err-paper" style="--x:74%; --s:1.05;--r:-14deg; --d:20s; --dl:-16s; --dx:30px"></span>
+    <span class="err-paper" style="--x:84%; --s:.75; --r:18deg;  --d:24s; --dl:-8s;  --dx:-35px"></span>
+    <span class="err-paper" style="--x:93%; --s:.9;  --r:-6deg;  --d:19s; --dl:-12s; --dx:20px"></span>
+  </div>
+</div>
+
+<main class="err-shell">
+
+  <a href="index.html" class="err-logo err-reveal" style="--d:.1s" aria-label="Stackly Legal home">
+    <span class="logo-mark" role="img" aria-label="Stackly Legal"></span>
+  </a>
+
+  <div class="err-eyebrow err-reveal" style="--d:.2s">
+    <span class="err-dot"></span> Error 404 &middot; File not found
+  </div>
+
+  <!-- 4 [scales of justice] 4 -->
+  <div class="err-digits" role="img" aria-label="404">
+    <span class="err-ring"></span>
+    <span class="err-digit err-digit-l">4</span>
+
+    <svg class="err-scales" viewBox="0 0 200 200" fill="none" aria-hidden="true">
+      <defs>
+        <linearGradient id="errBrass" gradientUnits="userSpaceOnUse" x1="0" y1="20" x2="200" y2="190">
+          <stop offset="0" stop-color="#e2c988"/>
+          <stop offset="1" stop-color="#ad8642"/>
+        </linearGradient>
+      </defs>
+
+      <!-- base + pillar -->
+      <path class="draw" d="M62 182 H138" stroke="url(#errBrass)" stroke-width="6" stroke-linecap="round"/>
+      <path class="draw" d="M76 182 Q100 168 124 182" stroke="url(#errBrass)" stroke-width="3" stroke-linecap="round"/>
+      <path class="draw" d="M100 56 V172" stroke="url(#errBrass)" stroke-width="5" stroke-linecap="round"/>
+
+      <!-- rocking beam -->
+      <g class="err-beam">
+        <path class="draw" d="M28 50 H172" stroke="url(#errBrass)" stroke-width="5" stroke-linecap="round"/>
+
+        <!-- left pan (holds the missing document) -->
+        <g class="err-pan err-pan-l">
+          <path d="M28 50 L8 112 M28 50 L48 112" stroke="#c9a968" stroke-width="1.6" stroke-linecap="round" opacity=".8"/>
+          <path d="M4 112 H52 Q28 138 4 112 Z" fill="url(#errBrass)"/>
+          <g class="err-doc">
+            <rect x="16" y="84" width="24" height="28" rx="2.5" fill="#f1ece0"/>
+            <path d="M21 92 H35 M21 97 H35" stroke="#ad8642" stroke-width="1.4" stroke-linecap="round" opacity=".55"/>
+            <text x="28" y="109" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-size="14" font-weight="650" fill="#14161b">?</text>
+          </g>
+        </g>
+
+        <!-- right pan (empty) -->
+        <g class="err-pan err-pan-r">
+          <path d="M172 50 L152 112 M172 50 L192 112" stroke="#c9a968" stroke-width="1.6" stroke-linecap="round" opacity=".8"/>
+          <path d="M148 112 H196 Q172 138 148 112 Z" fill="url(#errBrass)"/>
+        </g>
+      </g>
+
+      <!-- pivot -->
+      <circle cx="100" cy="50" r="8" fill="url(#errBrass)"/>
+      <circle cx="100" cy="50" r="3" fill="#14161b"/>
+      <path d="M100 42 V34" stroke="url(#errBrass)" stroke-width="4" stroke-linecap="round"/>
+      <circle cx="100" cy="30" r="4.5" fill="url(#errBrass)"/>
+    </svg>
+
+    <span class="err-digit err-digit-r">4</span>
+  </div>
+
+  <h1 class="err-reveal" style="--d:.55s">This page has been struck from the record.</h1>
+  <p class="err-sub err-reveal" style="--d:.7s">
+    The page you're looking for doesn't exist, has been moved, or is under seal.
+    Let's get you back to the right file.
+  </p>
+
+  <div class="err-case err-reveal" style="--d:.85s">
+    <i class="fa-solid fa-folder-open"></i>
+    <span class="err-case-label">Case file</span>
+    <code id="errPath">/</code>
+  </div>
+
+  <div class="err-actions err-reveal" style="--d:1s">
+    <a href="index.html" class="err-btn err-btn-primary">
+      <i class="fa-solid fa-house"></i><span>Back to home</span>
+    </a>
+    <button type="button" class="err-btn err-btn-ghost" id="errBack">
+      <i class="fa-solid fa-arrow-left-long"></i><span>Go to previous page</span>
+    </button>
+  </div>
+
+  <p class="err-foot err-reveal" style="--d:1.15s">&copy; Stackly Legal &middot; Need help? <a href="index.html#contact">Contact our team</a></p>
+</main>
+
+<script>
+(function () {
+  /* show the missing URL as the "case file" (textContent = safe, no HTML injection) */
+  var pathEl = document.getElementById('errPath');
+  if (pathEl) {
+    var p = location.pathname + location.search;
+    try { p = decodeURIComponent(p); } catch (e) {}
+    pathEl.textContent = p || '/';
+  }
+
+  /* previous page — only step back if the visitor came from this site, otherwise go home */
+  var backBtn = document.getElementById('errBack');
+  if (backBtn) {
+    backBtn.addEventListener('click', function () {
+      var sameSite = false;
+      try { sameSite = !!document.referrer && new URL(document.referrer).origin === location.origin; } catch (e) {}
+      if (window.history.length > 1 && sameSite) window.history.back();
+      else window.location.href = 'index.html';
+    });
+  }
+
+  /* gentle parallax on desktop pointers only */
+  var fine = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  var still = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (fine && !still) {
+    document.addEventListener('mousemove', function (e) {
+      var x = (e.clientX / window.innerWidth - 0.5);
+      var y = (e.clientY / window.innerHeight - 0.5);
+      document.body.style.setProperty('--mx', x.toFixed(3));
+      document.body.style.setProperty('--my', y.toFixed(3));
+    }, { passive: true });
+  }
+})();
+</script>
+</body>
+</html>

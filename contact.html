@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact &mdash; Stackly Legal</title>
+<meta name="description" content="Talk to a partner at Stackly Legal &mdash; call, email, visit our New York office, or book a time that works for you.">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,450;0,9..144,560;0,9..144,650;1,9..144,450&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ================= PRELOADER ================= -->
+<div class="preloader" id="preloader">
+  <div class="preloader-mark">
+    <span class="logo-mark logo-mark--preloader" role="img" aria-label="Stackly Legal"></span>
+  </div>
+</div>
+
+<!-- ================= HEADER ================= -->
+<header class="site-header" id="siteHeader">
+  <div class="header-inner">
+    <a href="index.html" class="header-logo">
+      <span class="logo-mark" role="img" aria-label="Stackly Legal"></span>
+    </a>
+
+    <nav class="main-nav" id="mainNav">
+      <ul>
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="services.html" class="nav-link">Services</a></li>
+        <li><a href="blog.html" class="nav-link">Blog</a></li>
+        <li><a href="contact.html" class="nav-link active">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-actions">
+      <a href="login.html" class="btn-login"><i class="fa-solid fa-user"></i><span>Login</span></a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- mobile drawer -->
+  <div class="mobile-drawer" id="mobileDrawer">
+    <ul>
+      <li><a href="index.html" class="mnav-link">Home</a></li>
+      <li><a href="about.html" class="mnav-link">About</a></li>
+      <li><a href="services.html" class="mnav-link">Services</a></li>
+      <li><a href="blog.html" class="mnav-link">Blog</a></li>
+      <li><a href="contact.html" class="mnav-link">Contact</a></li>
+    </ul>
+    <a href="login.html" class="btn-login mobile-login"><i class="fa-solid fa-user"></i><span>Login</span></a>
+  </div>
+</header>
+<div class="drawer-overlay" id="drawerOverlay"></div>
+
+<main>
+
+<!-- ================= 1. CONTACT HERO — morphing blob background + live office clock ================= -->
+<section class="cnh" id="cnh-top">
+  <svg class="cnh-blob" id="cnhBlob" viewBox="0 0 600 600" aria-hidden="true">
+    <path fill="url(#cnhGrad)">
+      <animate attributeName="d" dur="9s" repeatCount="indefinite" values="
+        M421,321Q391,392,321,428Q251,464,180,424Q109,384,90,306Q71,228,124,168Q177,108,254,101Q331,94,383,150Q435,206,421,321Z;
+        M431,290Q419,380,336,420Q253,460,178,412Q103,364,101,282Q99,200,168,152Q237,104,313,120Q389,136,415,203Q441,270,431,290Z;
+        M421,321Q391,392,321,428Q251,464,180,424Q109,384,90,306Q71,228,124,168Q177,108,254,101Q331,94,383,150Q435,206,421,321Z"></animate>
+    </path>
+    <defs>
+      <linearGradient id="cnhGrad" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="#AD8642" stop-opacity=".16"></stop>
+        <stop offset="1" stop-color="#7C5E2C" stop-opacity=".05"></stop>
+      </linearGradient>
+    </defs>
+  </svg>
+
+  <div class="cnh-inner">
+    <div class="section-label"><span class="rule"></span><span>Get in touch</span></div>
+    <h1 class="cnh-title">Let's start<br><span class="accent">the conversation.</span></h1>
+    <p class="cnh-desc">Every enquiry is read by a partner &mdash; not a call centre. Tell us what's going
+      on and we'll reply within one business day, usually sooner.</p>
+
+    <div class="cnh-badges">
+      <div class="cnh-clock" id="cnhClock">
+        <span class="cnh-dot"></span>
+        <span id="cnhClockText">--:-- in New York</span>
+      </div>
+      <div class="cnh-badge"><i class="fa-solid fa-bolt"></i><span>Avg. reply time: 4 hrs</span></div>
+    </div>
+
+    <div class="cnh-scroll" id="cnhScroll"><i class="fa-solid fa-computer-mouse"></i><span>Scroll to explore</span></div>
+  </div>
+</section>
+
+<!-- ================= 2. CONTACT METHODS — SVG line-draw icons on scroll ================= -->
+<section class="cnm" id="cnm">
+  <div class="services-head">
+    <div class="section-label"><span class="rule"></span><span>Choose your channel</span></div>
+    <h2 class="section-title">However you reach out, a partner answers</h2>
+  </div>
+
+  <div class="cnm-grid" id="cnmGrid">
+    <a href="404.html" class="cnm-card">
+      <svg class="cnm-icon" viewBox="0 0 60 60"><path d="M18 14c0-2 2-4 4-4h4l4 9-4 3c2 6 6 10 12 12l3-4 9 4v4c0 2-2 4-4 4C31 42 18 29 18 14Z"/></svg>
+      <h4>Call a partner</h4>
+      <p>+1 (212) 555-0148</p>
+      <span class="cnm-go">Direct line <i class="fa-solid fa-arrow-right"></i></span>
+    </a>
+    <a href="404.html" class="cnm-card">
+      <svg class="cnm-icon" viewBox="0 0 60 60"><path d="M10 16h40v28H10V16Zm0 0 20 16 20-16"/></svg>
+      <h4>Send an email</h4>
+      <p>counsel@stacklylegal.com</p>
+      <span class="cnm-go">Usually same day <i class="fa-solid fa-arrow-right"></i></span>
+    </a>
+    <a href="404.html" class="cnm-card">
+      <svg class="cnm-icon" viewBox="0 0 60 60"><path d="M30 10c11 0 20 8 20 18s-9 18-20 18c-2.4 0-4.7-.3-6.8-.9L12 50l3-10.4C11.1 36 8 31.4 8 26 8 14 19 10 30 10Z"/></svg>
+      <h4>Visit the office</h4>
+      <p>48 Meridian Ave, New York</p>
+      <span class="cnm-go">Get directions <i class="fa-solid fa-arrow-right"></i></span>
+    </a>
+    <a href="404.html" class="cnm-card">
+      <svg class="cnm-icon" viewBox="0 0 60 60"><path d="M10 12h40v24H24l-9 8v-8h-5V12Z"/></svg>
+      <h4>Live enquiry form</h4>
+      <p>Tell us the details once</p>
+      <span class="cnm-go">Fill it out <i class="fa-solid fa-arrow-right"></i></span>
+    </a>
+  </div>
+</section>
+
+<!-- ================= 3. OFFICE / MAP SPOTLIGHT — scroll parallax + pulsing map pin ================= -->
+<section class="cnv" id="cnv">
+  <div class="cnv-media" id="cnvMedia">
+    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?fm=webp&auto=format&fit=crop&q=60&w=1400&h=780" alt="Stackly Legal office building in New York" id="cnvImg">
+    <div class="cnv-scrim"></div>
+    <div class="cnv-pin" style="left:52%; top:44%;">
+      <span class="cnv-ring"></span><span class="cnv-ring cnv-ring2"></span>
+      <i class="fa-solid fa-location-dot"></i>
+    </div>
+  </div>
+  <div class="cnv-panel">
+    <div class="section-label light"><span class="rule"></span><span>Find us</span></div>
+    <h2 class="section-title light">48 Meridian Avenue, New York</h2>
+    <p class="section-sub light">Two blocks from Grand Central &mdash; visitor parking validated for meetings booked in advance.</p>
+    <div class="cnv-stats">
+      <div><strong>3<sup>rd</sup></strong><span>Floor, Suite 310</span></div>
+      <div><strong>9&ndash;6</strong><span>Mon&ndash;Fri, ET</span></div>
+      <div><strong>24h</strong><span>Secure key-card access</span></div>
+    </div>
+    <a href="404.html" class="btn-primary"><span>Open in Google Maps</span><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+  </div>
+</section>
+
+<!-- ================= 4. ENQUIRY FORM — floating labels + live completion progress bar ================= -->
+<section class="cnf" id="cnf">
+  <div class="services-head">
+    <div class="section-label"><span class="rule"></span><span>Tell us what's going on</span></div>
+    <h2 class="section-title">One form. No back-and-forth.</h2>
+  </div>
+
+  <div class="cnf-wrap">
+    <div class="cnf-progress"><div class="cnf-progress-bar" id="cnfProgressBar"></div></div>
+    <form class="cnf-form" id="cnfForm">
+    <div class="cnf-field">
+        <input type="text" id="cnfName" required placeholder=" ">
+        <label for="cnfName">Full name</label>
+    </div>
+
+    <div class="cnf-field">
+        <input type="email" id="cnfEmail" required placeholder=" ">
+        <label for="cnfEmail">Email address</label>
+    </div>
+
+    <div class="cnf-field">
+        <select id="cnfArea" required>
+            <option value="" disabled selected hidden></option>
+            <option>Corporate &amp; M&amp;A</option>
+            <option>Real Estate</option>
+            <option>Family Law</option>
+            <option>Intellectual Property</option>
+            <option>Tax</option>
+        </select>
+        <label for="cnfArea" class="cnf-label-select">Practice area</label>
+    </div>
+
+    <div class="cnf-field cnf-field-full">
+        <textarea id="cnfMsg" required placeholder=" " rows="4"></textarea>
+        <label for="cnfMsg">What's going on?</label>
+    </div>
+
+    <button type="submit" class="btn-primary cnf-submit">
+        <span>Send enquiry</span>
+        <i class="fa-solid fa-paper-plane"></i>
+    </button>
+
+    <p class="cnf-status" id="cnfStatus"></p>
+</form>
+  </div>
+</section>
+
+<!-- ================= 5. FAQ — smooth accordion with sliding indicator ================= -->
+<section class="cnq" id="cnq">
+  <div class="services-head">
+    <div class="section-label"><span class="rule"></span><span>Before you write in</span></div>
+    <h2 class="section-title">Quick answers</h2>
+  </div>
+
+  <div class="cnq-list" id="cnqList">
+    <div class="cnq-item open">
+      <button class="cnq-q"><span class="cnq-bar"></span><span>How fast will a partner actually respond?</span><i class="fa-solid fa-plus"></i></button>
+      <div class="cnq-a"><p>Within one business day for every enquiry, and same-day for retainer clients. You'll hear from the partner handling your practice area, not an intake coordinator.</p></div>
+    </div>
+    <div class="cnq-item">
+      <button class="cnq-q"><span class="cnq-bar"></span><span>Is the first conversation free?</span><i class="fa-solid fa-plus"></i></button>
+      <div class="cnq-a"><p>Yes. The first call is a fit and scoping conversation &mdash; no fee, no obligation, and you'll leave with a clear next step either way.</p></div>
+    </div>
+    <div class="cnq-item">
+      <button class="cnq-q"><span class="cnq-bar"></span><span>Do you work with clients outside New York?</span><i class="fa-solid fa-plus"></i></button>
+      <div class="cnq-a"><p>Regularly. Most matters are handled remotely, and we maintain an international bar network for cross-border work.</p></div>
+    </div>
+    <div class="cnq-item">
+      <button class="cnq-q"><span class="cnq-bar"></span><span>What should I bring to the first call?</span><i class="fa-solid fa-plus"></i></button>
+      <div class="cnq-a"><p>Nothing formal &mdash; a plain-English summary of the situation and any key dates or documents you already have on hand.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 6. PICK A TIME — mini scheduler with confetti-burst selection ================= -->
+<section class="cns" id="cns">
+  <div class="services-head">
+    <div class="section-label"><span class="rule"></span><span>Prefer to book directly</span></div>
+    <h2 class="section-title">Pick a day, we'll hold a slot</h2>
+    <p class="section-sub">Tap a day to reveal that day's open times &mdash; a partner will confirm by email.</p>
+  </div>
+
+  <div class="cns-days" id="cnsDays">
+    <button class="cns-day" data-day="Mon">Mon<span>24</span></button>
+    <button class="cns-day active" data-day="Tue">Tue<span>25</span></button>
+    <button class="cns-day" data-day="Wed">Wed<span>26</span></button>
+    <button class="cns-day" data-day="Thu">Thu<span>27</span></button>
+    <button class="cns-day" data-day="Fri">Fri<span>28</span></button>
+    <button class="cns-day cns-off" data-day="Sat" disabled>Sat<span>29</span></button>
+    <button class="cns-day cns-off" data-day="Sun" disabled>Sun<span>30</span></button>
+  </div>
+
+  <div class="cns-slots" id="cnsSlots">
+    <button class="cns-slot">9:00 AM</button>
+    <button class="cns-slot">11:30 AM</button>
+    <button class="cns-slot">1:00 PM</button>
+    <button class="cns-slot">3:30 PM</button>
+    <button class="cns-slot">5:00 PM</button>
+  </div>
+  <div class="cns-burst" id="cnsBurst" aria-hidden="true"></div>
+  <p class="cns-confirm" id="cnsConfirm"></p>
+</section>
+
+<!-- ================= 7. FINAL CTA — split-flap (airport board) headline reveal ================= -->
+<section class="cnc" id="cnc">
+  <div class="cnc-inner">
+    <div class="section-label light"><span class="rule"></span><span>No more forms, promise</span></div>
+    <div class="cnc-board" id="cncBoard" aria-label="Talk to a partner today"></div>
+    <p class="section-sub light">Real partners. Real answers. Usually the same day.</p>
+    <div class="svcta-cta">
+      <a href="404.html" class="btn-primary large"><span>Call now</span><i class="fa-solid fa-phone"></i></a>
+      <a href="404.html" class="btn-ghost light"><i class="fa-solid fa-envelope"></i><span>counsel@stacklylegal.com</span></a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="site-footer">
+  <div class="footer-top">
+    <div class="footer-brand">
+<a href="index.html" class="footer-logo-link" aria-label="Stackly Legal home">
+  <span class="logo-mark logo-mark--footer" role="img" aria-label="Stackly Legal"></span>
+</a>      <p>A modern legal consultancy for businesses and families who expect more than boilerplate advice.</p>
+      <div class="footer-social">
+        <a href="404.html"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="404.html"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="404.html"><i class="fa-brands fa-instagram"></i></a>
+        <a href="404.html"><i class="fa-brands fa-facebook-f"></i></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h5>Navigate</h5>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="footer-col">
+      <h5>Practice areas</h5>
+      <a href="404.html">Corporate &amp; M&amp;A</a>
+      <a href="404.html">Real Estate</a>
+      <a href="404.html">Family Law</a>
+      <a href="404.html">Intellectual Property</a>
+      <a href="404.html">Criminal Defense</a>
+    </div>
+    <div class="footer-col">
+      <h5>Contact</h5>
+      <a href="404.html"><i class="fa-solid fa-phone"></i> +1 (212) 555-0148</a>
+      <a href="404.html"><i class="fa-solid fa-envelope"></i> counsel@stacklylegal.com</a>
+      <a href="404.html"><i class="fa-solid fa-location-dot"></i> 48 Meridian Ave, New York</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2026 Stackly Legal Consultancy. All rights reserved.</span>
+    <div class="footer-legal">
+      <a href="404.html">Privacy Policy</a>
+      <a href="404.html">Terms of Service</a>
+      <a href="404.html">Attorney Advertising</a>
+    </div>
+  </div>
+</footer>
+
+<button class="scroll-top" id="scrollTop" aria-label="Scroll to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+<!-- Scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="script.js"></script>
+
+<script>
+document.getElementById('cnfForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    if (this.checkValidity()) {
+        window.location.href = '404.html';
+    } else {
+        this.reportValidity();
+    }
+});
+</script>
+</body>
+</html>

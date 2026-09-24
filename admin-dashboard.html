@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Dashboard &mdash; Stackly Legal</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,450;0,9..144,560;0,9..144,650;1,9..144,450&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="auth.css">
+</head>
+<body class="dash-page" data-role="admin">
+
+<div class="dash-overlay"></div>
+
+<div class="dash-shell">
+
+  <!-- ===== SIDEBAR ===== -->
+  <aside class="dash-sidebar">
+    <div class="dash-sidebar-logo"><span class="logo-mark" role="img" aria-label="Stackly Legal"></span></div>
+
+    <nav class="dash-nav">
+      <div class="dash-nav-label">Overview</div>
+      <a href="#" data-page="dashboard" class="active"><i class="fa-solid fa-gauge-high"></i> Dashboard</a>
+      <a href="#" data-page="inbox"><i class="fa-solid fa-envelope"></i> Inbox <span class="dash-badge">3</span></a>
+      <a href="#" data-page="analytics"><i class="fa-solid fa-chart-line"></i> Analytics</a>
+
+      <div class="dash-nav-label">Manage</div>
+      <a href="#" data-page="clients"><i class="fa-solid fa-users"></i> Clients</a>
+      <a href="#" data-page="matters"><i class="fa-solid fa-briefcase"></i> Matters</a>
+      <a href="#" data-page="billing"><i class="fa-solid fa-file-invoice-dollar"></i> Billing</a>
+
+      <div class="dash-nav-label">Account</div>
+      <a href="#" data-page="settings"><i class="fa-solid fa-gear"></i> Settings</a>
+      <a href="index.html"><i class="fa-solid fa-house"></i> Visit Website</a>
+    </nav>
+
+    <div class="dash-sidebar-foot">
+      <button class="dash-logout-btn js-logout"><i class="fa-solid fa-arrow-right-from-bracket"></i> Log out</button>
+    </div>
+  </aside>
+
+  <!-- ===== MAIN ===== -->
+  <main class="dash-main">
+    <div class="dash-topbar">
+      <button class="dash-hamburger" aria-label="Toggle menu"><i class="fa-solid fa-bars"></i></button>
+      <div class="dash-top-actions">
+<a href="404.html" class="dash-bell">
+    <i class="fa-solid fa-bell"></i>
+    <span class="dash-bell-dot"></span>
+</a>        <div class="dash-user">
+          <div class="dash-avatar js-user-initials">A</div>
+          <div class="dash-user-info"><strong class="js-user-name">&nbsp;</strong><span class="js-user-email">&nbsp;</span></div>
+          <i class="fa-solid fa-chevron-down" style="font-size:10px;color:#8a8879;"></i>
+          <div class="dash-user-menu">
+            <a href="404.html"><i class="fa-solid fa-user"></i> Profile</a>
+            <a href="404.html"><i class="fa-solid fa-gear"></i> Settings</a>
+            <a href="login.html" class="danger js-logout"><i class="fa-solid fa-arrow-right-from-bracket"></i> Log out</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="dash-content">
+
+      <!-- ============ DASHBOARD (overview) ============ -->
+      <div class="dash-page-section active" data-page="dashboard">
+        <div class="dash-welcome">
+          <h1>Welcome back, <span class="js-user-name">Admin</span><span class="dash-role-badge">Administrator</span></h1>
+          <p class="js-today">&nbsp;</p>
+        </div>
+
+        <div class="dash-stats">
+          <div class="dash-stat-card" data-target="128" data-suffix="">
+            <div class="dash-stat-top"><div class="dash-stat-icon"><i class="fa-solid fa-users"></i></div><div class="dash-stat-trend"><i class="fa-solid fa-arrow-up"></i> 8%</div></div>
+            <span class="num">0</span><label>Active clients</label>
+          </div>
+          <div class="dash-stat-card" data-target="46" data-suffix="">
+            <div class="dash-stat-top"><div class="dash-stat-icon"><i class="fa-solid fa-briefcase"></i></div><div class="dash-stat-trend"><i class="fa-solid fa-arrow-up"></i> 12%</div></div>
+            <span class="num">0</span><label>Open matters</label>
+          </div>
+          <div class="dash-stat-card" data-target="94200" data-suffix="">
+            <div class="dash-stat-top"><div class="dash-stat-icon"><i class="fa-solid fa-sack-dollar"></i></div><div class="dash-stat-trend down"><i class="fa-solid fa-arrow-down"></i> 3%</div></div>
+            <span class="num">0</span><label>Revenue (MTD, $)</label>
+          </div>
+          <div class="dash-stat-card" data-target="98" data-suffix="%">
+            <div class="dash-stat-top"><div class="dash-stat-icon"><i class="fa-solid fa-face-smile"></i></div><div class="dash-stat-trend"><i class="fa-solid fa-arrow-up"></i> 1%</div></div>
+            <span class="num">0</span><label>Client satisfaction</label>
+          </div>
+        </div>
+
+        <div class="dash-2col">
+          <div class="dash-panel">
+            <div class="dash-panel-head"><h3>New matters this week</h3><a href="#" data-page="analytics">View report</a></div>
+            <div class="dash-bars">
+              <div class="dash-bar-col"><div class="dash-bar" data-h="45"></div><span>Mon</span></div>
+              <div class="dash-bar-col"><div class="dash-bar" data-h="62"></div><span>Tue</span></div>
+              <div class="dash-bar-col"><div class="dash-bar" data-h="38"></div><span>Wed</span></div>
+              <div class="dash-bar-col"><div class="dash-bar" data-h="80"></div><span>Thu</span></div>
+              <div class="dash-bar-col"><div class="dash-bar" data-h="55"></div><span>Fri</span></div>
+              <div class="dash-bar-col"><div class="dash-bar" data-h="20"></div><span>Sat</span></div>
+              <div class="dash-bar-col"><div class="dash-bar" data-h="12"></div><span>Sun</span></div>
+            </div>
+          </div>
+
+          <div class="dash-panel">
+            <div class="dash-panel-head"><h3>Inbox</h3><a href="404.html" data-page="inbox">View all</a></div>
+            <div class="dash-inbox-list" id="dashInboxList"></div>
+          </div>
+        </div>
+
+        <div class="dash-panel">
+          <div class="dash-panel-head"><h3>Recent clients</h3><a href="#" data-page="clients">View all clients</a></div>
+          <div class="dash-table-wrap">
+            <table class="dash-table">
+              <thead><tr><th>Client</th><th>Email</th><th>Type</th><th>Status</th></tr></thead>
+              <tbody id="dashTableBody"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============ INBOX (full) ============ -->
+      <div class="dash-page-section" data-page="inbox">
+        <div class="dash-section-head">
+          <div><h2>Inbox</h2><p>Every client and case message in one place.</p></div>
+          <div class="dash-filter-pills" data-target="#dashInboxFull">
+            <span class="dash-filter-pill active" data-filter="all">All</span>
+            <span class="dash-filter-pill" data-filter="unread">Unread</span>
+            <span class="dash-filter-pill" data-filter="read">Read</span>
+          </div>
+        </div>
+        <div class="dash-panel">
+          <div class="dash-inbox-list" id="dashInboxFull"></div>
+        </div>
+      </div>
+
+      <!-- ============ ANALYTICS ============ -->
+      <div class="dash-page-section" data-page="analytics">
+        <div class="dash-section-head">
+          <div><h2>Analytics</h2><p>Firm-wide performance over the last 30 days.</p></div>
+        </div>
+        <div class="dash-stats">
+          <div class="dash-stat-card" data-target="34" data-suffix="">
+            <div class="dash-stat-top"><div class="dash-stat-icon"><i class="fa-solid fa-user-plus"></i></div><div class="dash-stat-trend"><i class="fa-solid fa-arrow-up"></i> 6%</div></div>
+            <span class="num">0</span><label>New leads</label>
+          </div>
+          <div class="dash-stat-card" data-target="41" data-suffix="%">
+            <div class="dash-stat-top"><div class="dash-stat-icon"><i class="fa-solid fa-bullseye"></i></div><div class="dash-stat-trend"><i class="fa-solid fa-arrow-up"></i> 4%</div></div>
+            <span class="num">0</span><label>Conversion rate</label>
+          </div>
+          <div class="dash-stat-card" data-target="2" data-suffix="h">
+            <div class="dash-stat-top"><div class="dash-stat-icon"><i class="fa-solid fa-stopwatch"></i></div><div class="dash-stat-trend"><i class="fa-solid fa-arrow-down"></i> faster</div></div>
+            <span class="num">0</span><label>Avg. response time</label>
+          </div>
+          <div class="dash-stat-card" data-target="72" data-suffix="%">
+            <div class="dash-stat-top"><div class="dash-stat-icon"><i class="fa-solid fa-rotate"></i></div><div class="dash-stat-trend"><i class="fa-solid fa-arrow-up"></i> 3%</div></div>
+            <span class="num">0</span><label>Repeat clients</label>
+          </div>
+        </div>
+        <div class="dash-2col">
+          <div class="dash-panel">
+            <div class="dash-panel-head"><h3>Revenue by month</h3></div>
+            <div class="dash-bars">
+              <div class="dash-bar-col"><div class="dash-bar" data-h="50"></div><span>Apr</span></div>
+              <div class="dash-bar-col"><div class="dash-bar" data-h="65"></div><span>May</span></div>
+              <div class="dash-bar-col"><div class="dash-bar" data-h="58"></div><span>Jun</span></div>
+              <div class="dash-bar-col"><div class="dash-bar" data-h="74"></div><span>Jul</span></div>
+              <div class="dash-bar-col"><div class="dash-bar" data-h="68"></div><span>Aug</span></div>
+              <div class="dash-bar-col"><div class="dash-bar" data-h="90"></div><span>Sep</span></div>
+            </div>
+          </div>
+          <div class="dash-panel">
+            <div class="dash-panel-head"><h3>Matters by practice area</h3></div>
+            <div class="dash-donut-wrap">
+              <div class="dash-donut"><div class="dash-donut-label"><strong>46</strong><span>Open</span></div></div>
+              <div class="dash-donut-legend">
+                <div><i style="background:var(--brass);"></i> Corporate &amp; M&amp;A (42%)</div>
+                <div><i style="background:var(--brass-light);"></i> Litigation (26%)</div>
+                <div><i style="background:rgba(20,22,27,.1);"></i> Other practice areas (32%)</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============ CLIENTS (full) ============ -->
+      <div class="dash-page-section" data-page="clients">
+        <div class="dash-section-head">
+          <div><h2>Clients</h2><p>Every active, pending and closed client relationship.</p></div>
+          <div class="dash-filter-pills" data-target="#dashClientsFull">
+            <span class="dash-filter-pill active" data-filter="all">All</span>
+            <span class="dash-filter-pill" data-filter="active">Active</span>
+            <span class="dash-filter-pill" data-filter="pending">Pending</span>
+            <span class="dash-filter-pill" data-filter="closed">Closed</span>
+          </div>
+        </div>
+        <div class="dash-panel">
+          <div class="dash-table-wrap">
+            <table class="dash-table">
+              <thead><tr><th>Client</th><th>Email</th><th>Practice area</th><th>Status</th></tr></thead>
+              <tbody id="dashClientsFull"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============ MATTERS (full) ============ -->
+      <div class="dash-page-section" data-page="matters">
+        <div class="dash-section-head">
+          <div><h2>Matters</h2><p>All open, pending and closed matters across the firm.</p></div>
+          <div class="dash-filter-pills" data-target="#dashMattersAdminFull">
+            <span class="dash-filter-pill active" data-filter="all">All</span>
+            <span class="dash-filter-pill" data-filter="active">Active</span>
+            <span class="dash-filter-pill" data-filter="pending">Pending</span>
+            <span class="dash-filter-pill" data-filter="closed">Closed</span>
+          </div>
+        </div>
+        <div class="dash-panel">
+          <div class="dash-table-wrap">
+            <table class="dash-table">
+              <thead><tr><th>Matter</th><th>Lead attorney</th><th>Practice area</th><th>Status</th></tr></thead>
+              <tbody id="dashMattersAdminFull"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============ BILLING ============ -->
+      <div class="dash-page-section" data-page="billing">
+        <div class="dash-section-head">
+          <div><h2>Billing</h2><p>Invoices across every active client.</p></div>
+        </div>
+        <div class="dash-billing-summary">
+          <div class="dash-stat-card" data-target="94200" data-suffix="">
+            <div class="dash-stat-top"><div class="dash-stat-icon"><i class="fa-solid fa-sack-dollar"></i></div></div>
+            <span class="num">0</span><label>Billed this month ($)</label>
+          </div>
+          <div class="dash-stat-card" data-target="81650" data-suffix="">
+            <div class="dash-stat-top"><div class="dash-stat-icon"><i class="fa-solid fa-circle-check"></i></div></div>
+            <span class="num">0</span><label>Collected ($)</label>
+          </div>
+          <div class="dash-stat-card" data-target="12550" data-suffix="">
+            <div class="dash-stat-top"><div class="dash-stat-icon"><i class="fa-solid fa-clock"></i></div></div>
+            <span class="num">0</span><label>Outstanding ($)</label>
+          </div>
+        </div>
+        <div class="dash-panel">
+          <div class="dash-table-wrap">
+            <table class="dash-table">
+              <thead><tr><th>Invoice</th><th>Client</th><th>Amount</th><th>Date</th><th>Status</th></tr></thead>
+              <tbody id="dashInvoiceList"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============ SETTINGS ============ -->
+      <div class="dash-page-section" data-page="settings">
+        <div class="dash-section-head"><div><h2>Settings</h2><p>Your profile and notification preferences.</p></div></div>
+        <div class="dash-panel dash-settings-card">
+          <form id="settingsForm">
+            <div id="settingsMsg" class="auth-msg"></div>
+            <div class="dash-form-grid">
+              <div class="dash-field"><label>Full name</label><input type="text" id="settingsName"></div>
+              <div class="dash-field"><label>Email address</label><input type="email" id="settingsEmail" disabled></div>
+              <div class="dash-field"><label>Role</label><input type="text" id="settingsRole" disabled></div>
+              <div class="dash-field"><label>Phone</label><input type="text" placeholder="+1 (212) 555-0148"></div>
+            </div>
+            <div class="dash-switch-row">
+              <div><strong>Email notifications</strong><span>New messages, invoices and filings</span></div>
+              <label class="switch"><input type="checkbox" checked><span class="switch-track"></span></label>
+            </div>
+            <div class="dash-switch-row">
+              <div><strong>New client alerts</strong><span>Instant alert when a new client signs up</span></div>
+              <label class="switch"><input type="checkbox" checked><span class="switch-track"></span></label>
+            </div>
+            <div class="dash-switch-row">
+              <div><strong>Weekly summary</strong><span>A Monday digest of firm activity</span></div>
+              <label class="switch"><input type="checkbox"><span class="switch-track"></span></label>
+            </div>
+<button type="button" class="btn-primary" style="margin-top:22px;" onclick="window.location.href='404.html';">
+    <span class="btn-label">Save changes</span>
+    <span class="btn-spinner"></span>
+</button>
+
+</form>
+        </div>
+      </div>
+
+    </div>
+  </main>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="script.js"></script>
+<script src="auth.js"></script>
+</body>
+</html>

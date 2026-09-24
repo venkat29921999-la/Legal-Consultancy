@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog &mdash; Stackly Legal</title>
+<meta name="description" content="The Stackly Journal &mdash; insights on corporate, real estate, family, IP and tax law from the partners at Stackly Legal.">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,450;0,9..144,560;0,9..144,650;1,9..144,450&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ================= PRELOADER ================= -->
+<div class="preloader" id="preloader">
+  <div class="preloader-mark">
+    <span class="logo-mark logo-mark--preloader" role="img" aria-label="Stackly Legal"></span>
+  </div>
+</div>
+
+<!-- ================= HEADER ================= -->
+<header class="site-header" id="siteHeader">
+  <div class="header-inner">
+    <a href="index.html#home" class="header-logo">
+      <span class="logo-mark" role="img" aria-label="Stackly Legal"></span>
+    </a>
+
+    <nav class="main-nav" id="mainNav">
+      <ul>
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="services.html" class="nav-link">Services</a></li>
+        <li><a href="blog.html" class="nav-link active">Blog</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-actions">
+      <a href="login.html" class="btn-login"><i class="fa-solid fa-user"></i><span>Login</span></a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- mobile drawer -->
+  <div class="mobile-drawer" id="mobileDrawer">
+    <ul>
+      <li><a href="index.html" class="mnav-link">Home</a></li>
+      <li><a href="about.html" class="mnav-link">About</a></li>
+      <li><a href="services.html" class="mnav-link">Services</a></li>
+      <li><a href="blog.html" class="mnav-link">Blog</a></li>
+      <li><a href="contact.html" class="mnav-link">Contact</a></li>
+    </ul>
+    <a href="login.html" class="btn-login mobile-login"><i class="fa-solid fa-user"></i><span>Login</span></a>
+  </div>
+</header>
+<div class="drawer-overlay" id="drawerOverlay"></div>
+
+<main>
+
+<!-- ================= 1. BLOG HERO — curtain-wipe title + magnetic floating tags ================= -->
+<section class="blh" id="blh-top">
+  <div class="blh-glow"></div>
+  <div class="blh-inner">
+    <div class="blh-copy">
+      <div class="section-label"><span class="rule"></span><span>The Stackly Journal</span></div>
+      <h1 class="blh-title">
+        <span class="blh-mask"><span class="blh-line">Insights worth</span></span>
+        <span class="blh-mask"><span class="blh-line accent">your billable hour.</span></span>
+      </h1>
+      <p class="blh-desc">Plain-English breakdowns of the law, deal terms and disputes that actually
+        touch founders, families and enterprises &mdash; written by the partners who handle them.</p>
+      <div class="blh-cta">
+        <a href="404.html" class="btn-primary"><span>Start reading</span><i class="fa-solid fa-arrow-down"></i></a>
+        <a href="404.html" class="btn-ghost"><i class="fa-solid fa-envelope"></i><span>Subscribe</span></a>
+      </div>
+    </div>
+
+    <div class="blh-visual" id="blhVisual">
+      <div class="blh-frame">
+        <img src="Assests/lc19.webp" alt="Writing desk with legal notes" width="640" height="760">
+        <div class="blh-badge"><i class="fa-solid fa-book-open"></i><span>6&nbsp;min read</span></div>
+      </div>
+      <div class="blh-tag blh-tag-1" data-depth="30"><i class="fa-solid fa-building"></i>Contracts</div>
+      <div class="blh-tag blh-tag-2" data-depth="55"><i class="fa-solid fa-lightbulb"></i>IP Law</div>
+      <div class="blh-tag blh-tag-3" data-depth="20"><i class="fa-solid fa-rocket"></i>Startups</div>
+      <div class="blh-tag blh-tag-4" data-depth="45"><i class="fa-solid fa-scale-balanced"></i>Litigation</div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 2. EDITOR'S PICK — circular reveal + spinning badge + slow zoom ================= -->
+<section class="blf" id="blf">
+  <div class="blf-inner">
+    <article class="blf-card" id="blfCard">
+      <div class="blf-media" id="blfMedia">
+        <img src="Assests/lc20.webp" alt="Law library shelves">
+        <div class="blf-scrim"></div>
+      </div>
+      <div class="blf-spin" aria-hidden="true">
+        <svg viewBox="0 0 120 120">
+          <defs><path id="blfCirc" d="M60,60 m-46,0 a46,46 0 1,1 92,0 a46,46 0 1,1 -92,0"></path></defs>
+          <text font-size="10.3" letter-spacing="2.4" fill="var(--ink)">
+            <textPath href="#blfCirc">EDITOR'S&nbsp;PICK &bull; EDITOR'S&nbsp;PICK &bull; </textPath>
+          </text>
+        </svg>
+        <i class="fa-solid fa-feather-pointed"></i>
+      </div>
+      <div class="blf-body">
+        <div class="blf-meta"><span><i class="fa-solid fa-user-tie"></i> Priya Anand, Partner</span><span><i class="fa-solid fa-calendar"></i> Mar 14</span><span><i class="fa-solid fa-clock"></i> 9 min</span></div>
+        <h2 class="blf-title">What a term sheet doesn't tell founders &mdash; until it's too late</h2>
+        <p class="blf-desc">Liquidation preferences, pro-rata rights and board control clauses look harmless in a
+          two-page term sheet. Here's what to renegotiate before you sign, and what's genuinely non-negotiable.</p>
+        <a href="#bln" class="btn-primary"><span>Read the full story</span><i class="fa-solid fa-arrow-right-long"></i></a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ================= 3. CATEGORY FILTER + ARTICLE GRID — 3D unfold reveal + shine sweep ================= -->
+<section class="blg" id="blg">
+  <div class="services-head">
+    <div class="section-label"><span class="rule"></span><span>Browse the journal</span></div>
+    <h2 class="section-title">Field notes from every practice group</h2>
+    <p class="section-sub">Filter by area, or scroll through everything we've published this quarter.</p>
+  </div>
+
+  <div class="blg-chips" id="blgChips">
+    <button class="blg-chip active" data-filter="all">All</button>
+    <button class="blg-chip" data-filter="corporate">Corporate</button>
+    <button class="blg-chip" data-filter="realestate">Real Estate</button>
+    <button class="blg-chip" data-filter="ip">IP</button>
+    <button class="blg-chip" data-filter="tax">Tax</button>
+    <button class="blg-chip" data-filter="litigation">Litigation</button>
+  </div>
+
+  <div class="blg-grid" id="blgGrid">
+    <article class="blg-card" data-cat="corporate" style="--d:0">
+      <div class="blg-media"><img src="Assests/lc21.webp" alt="Contract signing"></div>
+      <span class="blg-tag">Corporate</span>
+      <h3>SAFEs vs. priced rounds: what actually changes at Series A</h3>
+      <div class="blg-foot"><span>Apr 02</span><span>5 min</span></div>
+    </article>
+    <article class="blg-card" data-cat="realestate" style="--d:1">
+      <div class="blg-media"><img src="Assests/lc22.webp" alt="Commercial building exterior"></div>
+      <span class="blg-tag">Real Estate</span>
+      <h3>Ground leases, explained for people who aren't developers</h3>
+      <div class="blg-foot"><span>Mar 27</span><span>6 min</span></div>
+    </article>
+    <article class="blg-card" data-cat="ip" style="--d:2">
+      <div class="blg-media"><img src="Assests/lc23.webp" alt="Designer sketching a logo"></div>
+      <span class="blg-tag">IP Law</span>
+      <h3>Trademark it before you brand it: a founder's pre-launch checklist</h3>
+      <div class="blg-foot"><span>Mar 19</span><span>4 min</span></div>
+    </article>
+    <article class="blg-card" data-cat="tax" style="--d:3">
+      <div class="blg-media"><img src="Assests/lc24.webp" alt="Tax documents and calculator"></div>
+      <span class="blg-tag">Tax</span>
+      <h3>QSBS explained: the exemption that can save founders millions</h3>
+      <div class="blg-foot"><span>Mar 11</span><span>7 min</span></div>
+    </article>
+    <article class="blg-card" data-cat="litigation" style="--d:4">
+      <div class="blg-media"><img src="Assests/lc25.webp" alt="Gavel on a desk"></div>
+      <span class="blg-tag">Litigation</span>
+      <h3>Arbitration clauses: the fine print that decides where you fight</h3>
+      <div class="blg-foot"><span>Mar 04</span><span>5 min</span></div>
+    </article>
+    <article class="blg-card" data-cat="corporate" style="--d:5">
+      <div class="blg-media"><img src="Assests/lc26.webp" alt="Startup team working"></div>
+      <span class="blg-tag">Corporate</span>
+      <h3>Vesting cliffs and founder splits: fixing it before it breaks the team</h3>
+      <div class="blg-foot"><span>Feb 26</span><span>6 min</span></div>
+    </article>
+  </div>
+</section>
+
+<!-- ================= 4. TRENDING — dual counter-scrolling marquee rows ================= -->
+<section class="blt" id="blt" aria-label="Trending on the journal">
+  <div class="blt-head"><span class="rule"></span><span>Trending this week</span></div>
+  <div class="blt-row blt-row-a" id="bltRowA">
+    <span>Non-competes after the FTC ruling <i class="fa-solid fa-arrow-trend-up"></i></span>
+    <span>Convertible notes vs. SAFEs <i class="fa-solid fa-arrow-trend-up"></i></span>
+    <span>Landlord default remedies, state by state <i class="fa-solid fa-arrow-trend-up"></i></span>
+    <span>Trademark oppositions explained <i class="fa-solid fa-arrow-trend-up"></i></span>
+    <span>Non-competes after the FTC ruling <i class="fa-solid fa-arrow-trend-up"></i></span>
+    <span>Convertible notes vs. SAFEs <i class="fa-solid fa-arrow-trend-up"></i></span>
+    <span>Landlord default remedies, state by state <i class="fa-solid fa-arrow-trend-up"></i></span>
+    <span>Trademark oppositions explained <i class="fa-solid fa-arrow-trend-up"></i></span>
+  </div>
+  <div class="blt-row blt-row-b" id="bltRowB">
+    <span>Prenups for founders <i class="fa-solid fa-arrow-trend-up"></i></span>
+    <span>Fixed-fee vs. hourly, honestly <i class="fa-solid fa-arrow-trend-up"></i></span>
+    <span>What an NDA can't actually stop <i class="fa-solid fa-arrow-trend-up"></i></span>
+    <span>Estate plans for blended families <i class="fa-solid fa-arrow-trend-up"></i></span>
+    <span>Prenups for founders <i class="fa-solid fa-arrow-trend-up"></i></span>
+    <span>Fixed-fee vs. hourly, honestly <i class="fa-solid fa-arrow-trend-up"></i></span>
+    <span>What an NDA can't actually stop <i class="fa-solid fa-arrow-trend-up"></i></span>
+    <span>Estate plans for blended families <i class="fa-solid fa-arrow-trend-up"></i></span>
+  </div>
+</section>
+
+<!-- ================= 5. MEET THE WRITERS — flip cards in a snap carousel ================= -->
+<section class="bla" id="bla">
+  <div class="services-head">
+    <div class="section-label"><span class="rule"></span><span>Who writes this</span></div>
+    <h2 class="section-title">Partners, not ghostwriters</h2>
+    <p class="section-sub">Every article carries a byline from the partner who actually handles that kind of matter. Tap or hover a card to flip it.</p>
+  </div>
+
+  <div class="bla-track" id="blaTrack">
+    <div class="bla-card">
+      <div class="bla-inner">
+        <div class="bla-front">
+          <img src="Assests/lc27.webp" alt="Priya Anand">
+          <h4>Priya Anand</h4><span>Corporate &amp; M&amp;A</span>
+        </div>
+        <div class="bla-back">
+          <p>12 years advising venture-backed founders through funding rounds and exits.</p>
+          <div class="bla-social"><a href="404.html"><i class="fa-brands fa-linkedin-in"></i></a><a href="404.html"><i class="fa-solid fa-envelope"></i></a></div>
+        </div>
+      </div>
+    </div>
+    <div class="bla-card">
+      <div class="bla-inner">
+        <div class="bla-front">
+          <img src="Assests/lc28.webp" alt="Daniel Cho">
+          <h4>Daniel Cho</h4><span>Real Estate</span>
+        </div>
+        <div class="bla-back">
+          <p>Closed over 300 commercial transactions across five states since 2011.</p>
+          <div class="bla-social"><a href="404.html"><i class="fa-brands fa-linkedin-in"></i></a><a href="404.html"><i class="fa-solid fa-envelope"></i></a></div>
+        </div>
+      </div>
+    </div>
+    <div class="bla-card">
+      <div class="bla-inner">
+        <div class="bla-front">
+          <img src="Assests/lc29.webp" alt="Maria Torres">
+          <h4>Maria Torres</h4><span>Family Law</span>
+        </div>
+        <div class="bla-back">
+          <p>Focuses on prenuptial planning and custody matters for modern families.</p>
+          <div class="bla-social"><a href="404.html"><i class="fa-brands fa-linkedin-in"></i></a><a href="404.html"><i class="fa-solid fa-envelope"></i></a></div>
+        </div>
+      </div>
+    </div>
+    <div class="bla-card">
+      <div class="bla-inner">
+        <div class="bla-front">
+          <img src="Assests/lc30.webp" alt="James Whitfield">
+          <h4>James Whitfield</h4><span>IP &amp; Litigation</span>
+        </div>
+        <div class="bla-back">
+          <p>Former federal clerk; now leads trademark and trade-secret disputes.</p>
+          <div class="bla-social"><a href="404.html"><i class="fa-brands fa-linkedin-in"></i></a><a href="404.html"><i class="fa-solid fa-envelope"></i></a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 6. NEWSLETTER — drifting envelopes + paper-plane launch button ================= -->
+<section class="bln" id="bln">
+  <div class="bln-drift" aria-hidden="true">
+    <i class="fa-solid fa-envelope bln-i1"></i>
+    <i class="fa-regular fa-envelope bln-i2"></i>
+    <i class="fa-solid fa-envelope bln-i3"></i>
+  </div>
+  <div class="bln-inner">
+    <div class="section-label light"><span class="rule"></span><span>No spam, just counsel</span></div>
+    <h2 class="section-title light">One email a month. Zero legalese.</h2>
+    <p class="section-sub light">Join 4,200+ founders and operators who get our sharpest article, first.</p>
+   <form class="bln-form" id="blnForm">
+    <input type="email" placeholder="you@company.com" required aria-label="Email address">
+
+    <button type="submit" class="btn-primary bln-btn">
+        <span>Subscribe</span>
+        <i class="fa-solid fa-paper-plane bln-plane"></i>
+    </button>
+</form>
+    <p class="bln-note" id="blnNote">Unsubscribe anytime. We'll never share your inbox.</p>
+  </div>
+</section>
+
+<!-- ================= 7. FINAL CTA — wave-on-hover title + parallax scattered marks ================= -->
+<section class="blc" id="blc">
+  <div class="blc-marks" id="blcMarks" aria-hidden="true">
+    <span>&#8220;</span><span>&sect;</span><span>&#8221;</span><span>&bull;</span><span>&sect;</span><span>&#8220;</span>
+  </div>
+  <div class="blc-inner">
+    <div class="section-label light"><span class="rule"></span><span>Never miss an issue</span></div>
+    <h2 class="blc-title" id="blcTitle">Explore every article we've published.</h2>
+    <p class="section-sub light">Full archive, searchable by practice area &mdash; or just talk to a partner directly.</p>
+    <div class="svcta-cta">
+      <a href="404.html" class="btn-primary large"><span>View full archive</span><i class="fa-solid fa-arrow-right-long"></i></a>
+      <a href="404.html" class="btn-ghost light"><i class="fa-solid fa-phone"></i><span>+1 (212) 555-0148</span></a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="site-footer">
+  <div class="footer-top">
+    <div class="footer-brand">
+<a href="index.html" class="footer-logo-link" aria-label="Stackly Legal home">
+  <span class="logo-mark logo-mark--footer" role="img" aria-label="Stackly Legal"></span>
+</a>      <p>A modern legal consultancy for businesses and families who expect more than boilerplate advice.</p>
+      <div class="footer-social">
+        <a href="404.html"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="404.html"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="404.html"><i class="fa-brands fa-instagram"></i></a>
+        <a href="404.html"><i class="fa-brands fa-facebook-f"></i></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h5>Navigate</h5>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="footer-col">
+      <h5>Practice areas</h5>
+      <a href="404.html">Corporate &amp; M&amp;A</a>
+      <a href="404.html">Real Estate</a>
+      <a href="404.html">Family Law</a>
+      <a href="404.html">Intellectual Property</a>
+      <a href="404.html">Criminal Defense</a>
+    </div>
+    <div class="footer-col">
+      <h5>Contact</h5>
+      <a href="404.html"><i class="fa-solid fa-phone"></i> +1 (212) 555-0148</a>
+      <a href="404.html"><i class="fa-solid fa-envelope"></i> counsel@stacklylegal.com</a>
+      <a href="404.html"><i class="fa-solid fa-location-dot"></i> 48 Meridian Ave, New York</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2026 Stackly Legal Consultancy. All rights reserved.</span>
+    <div class="footer-legal">
+      <a href="404.html">Privacy Policy</a>
+      <a href="404.html">Terms of Service</a>
+      <a href="404.html">Attorney Advertising</a>
+    </div>
+  </div>
+</footer>
+
+<button class="scroll-top" id="scrollTop" aria-label="Scroll to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+<!-- Scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="script.js"></script>
+
+<script>
+document.getElementById('blnForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    if (this.checkValidity()) {
+        window.location.href = '404.html';
+    } else {
+        this.reportValidity();
+    }
+});
+</script>
+</body>
+</html>

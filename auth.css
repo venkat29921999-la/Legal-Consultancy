@@ -575,7 +575,6 @@ body.dash-mv-lock{ overflow:hidden; }
 .auth-forgot:focus-visible{ outline:2px solid var(--brass); outline-offset:3px; border-radius:4px; }
 
 
-
 /* =========================================================================
    DASHBOARD MOBILE FIX — user-dashboard.html / admin-dashboard.html  (appended only)
    ---------------------------------------------------------------------
@@ -585,8 +584,8 @@ body.dash-mv-lock{ overflow:hidden; }
    wide "natural" width, which stretched the panels far past the screen, and
    the page-level overflow clip then hid everything beyond the edge.
    Switching every dashboard grid track to minmax(0,1fr) lets the panels
-   shrink to the screen, so the ellipsis/scroll behaviour already in
-   auth.css works as intended.  Scoped to .dash-page, so no other page changes.
+   shrink to the screen, so the ellipsis/scroll behaviour already in this
+   file works as intended.  Scoped to .dash-page — nothing above is modified.
 ========================================================================= */
 .dash-page .dash-shell{ grid-template-columns:260px minmax(0,1fr); }
 .dash-page .dash-stats{ grid-template-columns:repeat(4,minmax(0,1fr)); }
@@ -625,3 +624,27 @@ body.dash-mv-lock{ overflow:hidden; }
 @media (max-width:420px){
   .dash-page .dash-stats{ grid-template-columns:minmax(0,1fr); }
 }
+
+
+/* =========================================================================
+   PASSWORD SHOW/HIDE ICON — WebP images instead of Font Awesome  (appended only)
+   ---------------------------------------------------------------------
+   auth.js still swaps the button's <i class="fa-eye"> / <i class="fa-eye-slash">,
+   so nothing in the HTML or JS changes. These rules hide the Font Awesome glyph
+   and show a WebP image in its place:
+       fa-eye        (password hidden)  -> Assests/eye.webp
+       fa-eye-slash  (password visible) -> Assests/eye-off.webp
+========================================================================= */
+.field-group .fld-toggle{
+  display:flex; align-items:center; justify-content:center;
+  width:34px; height:34px; padding:0; right:10px;
+}
+.field-group .fld-toggle i{
+  display:block; width:18px; height:18px; font-size:0; line-height:0;
+  background-repeat:no-repeat; background-position:center; background-size:18px 18px;
+  opacity:.9; transition:opacity .25s, filter .25s;
+}
+.field-group .fld-toggle i::before{ content:none; }                       /* remove the Font Awesome glyph */
+.field-group .fld-toggle i.fa-eye{       background-image:url("Assests/eye-off.webp"); }
+.field-group .fld-toggle i.fa-eye-slash{ background-image:url("Assests/eye.webp"); }
+.field-group .fld-toggle:hover i{ opacity:1; filter:brightness(.4); }      /* darker on hover, like before */

@@ -645,6 +645,28 @@ body.dash-mv-lock{ overflow:hidden; }
   opacity:.9; transition:opacity .25s, filter .25s;
 }
 .field-group .fld-toggle i::before{ content:none; }                       /* remove the Font Awesome glyph */
-.field-group .fld-toggle i.fa-eye{       background-image:url("Assests/eye-off.webp"); }
-.field-group .fld-toggle i.fa-eye-slash{ background-image:url("Assests/eye.webp"); }
+.field-group .fld-toggle i.fa-eye{       background-image:url("Assests/eye.webp"); }
+.field-group .fld-toggle i.fa-eye-slash{ background-image:url("Assests/eye-off.webp"); }
 .field-group .fld-toggle:hover i{ opacity:1; filter:brightness(.4); }      /* darker on hover, like before */
+
+
+/* =========================================================================
+   PASSWORD ICON — follow the real field state + hide browser's own icon  (appended only)
+   ---------------------------------------------------------------------
+   1) The WebP icon is now picked from the input itself, not from the Font Awesome
+      class the button happens to have:
+         password hidden  (type="password") -> eye.webp
+         password visible (type="text")     -> eye-off.webp
+      so it can never show the wrong icon, whichever class the script sets.
+   2) Edge / Chrome draw their own eye / key icon inside password fields (these show
+      up in DevTools > Network as "svg+xml" images). Hide them so only ours shows.
+========================================================================= */
+.field-group:has(> input[type="password"]) .fld-toggle i{ background-image:url("Assests/eye-off.webp"); }
+.field-group:has(> input[type="text"])     .fld-toggle i{ background-image:url("Assests/eye.webp"); }
+
+.field-group input::-ms-reveal,
+.field-group input::-ms-clear{ display:none; }
+.field-group input::-webkit-credentials-auto-fill-button,
+.field-group input::-webkit-contacts-auto-fill-button{
+  visibility:hidden; display:none !important; pointer-events:none; position:absolute; right:0;
+}
